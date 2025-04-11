@@ -1,35 +1,46 @@
 <!DOCTYPE html>
-<html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Essayer en AR</title>
-    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-    <style>
-      body {
-        margin: 0;
-        padding: 0;
-        background-color: #f8f8f8;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 100vh;
-      }
-      model-viewer {
-        width: 100%;
-        height: 100vh;
-      }
-    </style>
-  </head>
-  <body>
-    <model-viewer
-      src="essayer_site.glb"
-      ar
-      ar-modes="scene-viewer webxr quick-look"
-      auto-rotate
-      camera-controls
-      shadow-intensity="1"
-      alt="Plat en AR">
-    </model-viewer>
-  </body>
-</html>
+ <html lang="fr">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Pavé de Boeuf en Réalité Augmentée</title>
+     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+     <style>
+         body {
+             text-align: center;
+             font-family: Arial, sans-serif;
+             background-color: #f8f8f8;
+         }
+         model-viewer {
+             width: 100%;
+             max-width: 600px;
+             height: 500px;
+             margin: auto;
+         }
+         .back-link {
+             display: block;
+             margin-top: 20px;
+             font-size: 18px;
+             color: #d4af37;
+             text-decoration: none;
+             font-weight: bold;
+         }
+         .back-link:hover {
+             text-decoration: underline;
+         }
+     </style>
+ </head>
+ <body>
+     <h1>Visualisez votre Pavé de Boeuf en 3D</h1>
+     <model-viewer 
+         src="https://danch18.github.io/menu-restaurant/le_chalet/essayer_site.glb" 
+         ar 
+         ar-modes="scene-viewer webxr quick-look" 
+         camera-controls 
+         auto-rotate>
+     </model-viewer>
+     <p>Scannez le QR Code pour voir ce plat en AR.</p>
+     
+     <a href="index.html" class="back-link">Retour au menu</a>
+ </body>
+ </html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Visualisation AR</title>
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <style>
+      body {
+        margin: 0;
+        background: #f0f0f0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      model-viewer {
+        width: 100%;
+        height: 100vh;
+      }
+    </style>
+  </head>
+  <body>
+    <model-viewer 
+      src="essayer_site.glb" 
+      ar 
+      ar-modes="scene-viewer webxr quick-look"
+      camera-controls 
+      auto-rotate 
+      ios-src="plat.usdz"
+      alt="Plat en réalité augmentée">
+    </model-viewer>
+  </body>
+</html>
